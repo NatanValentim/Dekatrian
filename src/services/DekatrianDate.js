@@ -3,7 +3,6 @@ import { months, specialDays } from '../util/consts';
 export const DekatrianDate = () => {
   const date = new Date();
   const daysInMonth = 28;
-  const monthsInYear = months.length;
   let dayOfTheYear = 0;
   
   const getDayOfTheYear = (now) => {
