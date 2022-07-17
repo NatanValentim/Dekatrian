@@ -19,34 +19,35 @@ export const specialDays = [
   'Sincronian'
 ];
 
+const opacity = 0.5;
 export const weekDays = [
   {
     name:'Rubia',
-    color: '#eb4034'
+    color: `rgba(235, 64, 52, ${opacity})`
   },
   {
     name:'Auria',
-    color: '#eb7434'
+    color: `rgba(235, 116, 52, ${opacity})`
   },
   {
     name:'Flavia',
-    color: '#ebcc34'
+    color: `rgba(235, 204, 52, ${opacity})`
   },
   {
     name:'Virdia',
-    color: '#53eb34'
+    color: `rgba(83, 235, 52, ${opacity})`
   },
   {
     name:'Coria',
-    color: '#3496eb'
+    color: `rgba(52, 150, 235, ${opacity})`
   },
   {
     name:'India',
-    color: '#eb34eb'
+    color: `rgba(235, 52, 235, ${opacity})`
   },
   {
     name:'Violeta',
-    color: '#b434eb'
+    color: `rgba(180, 52, 235, ${opacity})`
   }
 ];
 

@@ -22,11 +22,11 @@ export const DekatrianDate = () => {
   dayOfTheYear = isAchronian() || isSincronian() ? undefined : getDayOfTheYear(date);
   dayOfTheYear = !(date.getFullYear() % 4) ? dayOfTheYear - 1 : dayOfTheYear;
 
-  const getDate = () => dayOfTheYear % daysInMonth;
+  const getDate = () => (dayOfTheYear % daysInMonth) || 28; // If 0, the day is 28
 
   const getMonth = () => isAchronian() ? specialDays[0] : // Achronian
     isSincronian() ? specialDays[1] : // Sincronian
-    months[Math.floor(dayOfTheYear / daysInMonth)];
+    months[Math.floor((dayOfTheYear -1) / daysInMonth)];
 
   const getYear = () => date.getFullYear() + 10000;
 

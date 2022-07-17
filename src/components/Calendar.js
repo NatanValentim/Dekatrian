@@ -1,8 +1,21 @@
+import React from 'react';
 import { weekDays, weeks } from '../util/consts'
 import Day from './Day';
 
-const Calendar = () => {
+const Calendar = ({apiCalendar}) => {
   let monthDay = 1;
+
+  console.log(apiCalendar)
+
+  try {
+    apiCalendar.setCalendar(apiCalendar.calendar);
+    apiCalendar.listUpcomingEvents(1)
+      .then(res => {
+        console.log(res)
+      });
+  } catch (error) {
+    console.log(error)
+  }
 
   return (
     <table style={{width: '-webkit-fill-available'}}>
